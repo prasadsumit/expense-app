@@ -3,6 +3,7 @@ import 'package:rupiya/models/authentication_service.dart';
 import 'package:rupiya/models/database_service.dart';
 import 'package:rupiya/screens/about_screen.dart';
 import 'package:rupiya/screens/homescreen.dart';
+import 'package:rupiya/screens/reset_screen.dart';
 import 'package:rupiya/themes/app_theme.dart';
 import 'package:rupiya/screens/start_page.dart';
 import 'package:rupiya/ux/loading_screen.dart';
@@ -67,6 +68,15 @@ class ExpensesApp extends StatelessWidget {
                   reverseDuration: Duration(milliseconds: 300),
                 );
               }
+              case '/reset_screen' : {
+                return PageTransition(
+                  child: ResetScreen(),
+                  childCurrent: LoginPage(),
+                  type: PageTransitionType.rightToLeftJoined,
+                  duration: Duration(milliseconds: 300),
+                  reverseDuration: Duration(milliseconds: 300),
+                );
+              }
               case '/sign_up_screen' : {
                 return PageTransition(
                   child: SignUpPage(),
@@ -80,16 +90,16 @@ class ExpensesApp extends StatelessWidget {
                 return PageTransition(
                   child: ExpenseRecordList(),
                   type: PageTransitionType.fade,
-                  duration: Duration(milliseconds: 300),
-                  reverseDuration: Duration(milliseconds: 300),
+                  duration: Duration(milliseconds: 200),
+                  reverseDuration: Duration(milliseconds: 200),
                 );
               }
               case '/about_screen' : {
                 return PageTransition(
                   child: About(),
                   type: PageTransitionType.fade,
-                  duration: Duration(milliseconds: 300),
-                  reverseDuration: Duration(milliseconds: 300),
+                  duration: Duration(milliseconds: 200),
+                  reverseDuration: Duration(milliseconds: 200),
                 );
               }
               case '/home_screen' : {
@@ -104,8 +114,8 @@ class ExpensesApp extends StatelessWidget {
                 return PageTransition(
                   child: StartPage(),
                   type: PageTransitionType.rightToLeft,
-                  duration: Duration(milliseconds: 400),
-                  reverseDuration: Duration(milliseconds: 400),
+                  duration: Duration(milliseconds: 300),
+                  reverseDuration: Duration(milliseconds: 300),
                 );
               }
               case '/goto_facebook' : {

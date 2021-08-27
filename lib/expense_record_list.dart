@@ -17,6 +17,12 @@ class ExpenseRecordList extends StatelessWidget {
       width: size.width,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: AppColor.bodyColor,
+          leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(Icons.arrow_back_rounded),
+            color: AppColor.textColor,
+            ),
           title: Text('History',
           textAlign: TextAlign.justify,
             style: TextStyle(color: AppColor.textColor),

@@ -112,7 +112,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                 return 'This field can\'t be empty';
                               else if(value.length < 6 || value.length > 12)
                                 return 'Password should be between 6-12 characters';
-                            /// TODO: make a strong password
                               else
                                 return null;
                             },

@@ -39,4 +39,14 @@ class AuthenticationService{
     }
   }
 
+  Future<String> resetPassword({String email}) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+      return "Sent";
+    } catch (e) {
+      print(e);
+      return e.code;
+    }
+  }
+
 }

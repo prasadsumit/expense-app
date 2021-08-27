@@ -11,6 +11,14 @@ class About extends StatelessWidget {
       height: size.height,
       width: size.width,
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppColor.bodyColor,
+          leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(Icons.arrow_back_rounded),
+            color: AppColor.textColor,
+            ),
+        ),
         body: SafeArea(
           child: Container(
             padding: EdgeInsets.all(10.0),
@@ -32,9 +40,9 @@ class About extends StatelessWidget {
                       fontWeight: FontWeight.w300),
                 ),
                 SizedBox(height: 20.0),
-                Text('Hi, I am Sumit. I am a 3rd year undegraduate in \n'+
+                Text('Hi, I am Sumit, currently a undegraduate in \n'+
                   'NIT Silchar. This is my first project based on a real life problem. I have been always overwhelmed by the experience and ease that '+
-                  'Flutter provides. I hope you are satisfied with problem it tackles.',
+                  'Flutter provides.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: AppColor.darkTextColor,
